@@ -12,7 +12,11 @@ var Tower = function () {
         top: 0,
         click: false,
         width: 70,
-        height: 70
+        height: 70,
+		angularDirection: 0,
+		rotation: 0,
+		directionX: 0,
+		directionY: 0
     };
     this.inventoryTowers[0].imageIcon.src = "images/tower/green-castle.png";
     this.inventoryTowers[1] = {
@@ -22,7 +26,11 @@ var Tower = function () {
         top: 0,
         click: false,
         width: 70,
-        height: 70
+        height: 70,
+		angularDirection: 0,
+		rotation: 0,
+		directionX: 0,
+		directionY: 0
     };
     this.inventoryTowers[1].imageIcon.src = "images/tower/red-castle.png";
     this.inventoryTowers[2] = {
@@ -32,7 +40,11 @@ var Tower = function () {
         top: 0,
         click: false,
         width: 70,
-        height: 70
+        height: 70,
+		angularDirection: 0,
+		rotation: 0,
+		directionX: 0,
+		directionY: 0
     };
     this.inventoryTowers[2].imageIcon.src = "images/tower/white-castle.png";
 
@@ -55,6 +67,8 @@ Tower.prototype.update = function () {
     this.aTowerisClicked = false;
     this.towerClicked = "";
 
+	
+	
     if (mouselistener.mouseDown === true && this.aTowerisClicked === false) {
         //console.log("how many towers ", this.inventoryTowers.length)
         // if the user is clicking a tower, set inventoryTowers[i] click to 'true'
